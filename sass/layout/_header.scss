@@ -1,0 +1,110 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+@use '../abstracts/mixins' as mix;
+div.imagen_header{
+    max-width: 100%;
+    height: auto;
+    text-align: right;
+}
+div.imagen_header picture{
+    & img{
+    max-width: 100%;
+    @include mix.breakpoint(tablet){
+        max-width: 100%;
+        height: auto;
+        }
+    @include mix.breakpoint(desktop){
+        max-width: 55%;
+        height: auto;
+
+        }
+    }
+}
+
+div.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    @include mix.breakpoint(tablet){
+        width: 339px;
+        height: 410px;
+        padding-top: 140px;
+        margin-left: -55px;
+    
+    }
+    & h1{
+        font-family:"Big Shoulders", sans-serif;
+        font-size: 60px;
+        line-height: 55px;
+        @include mix.breakpoint(desktop){
+            transform: translate(-180%);
+            color: white;
+            font-size: 96px;
+            line-height: 88px;
+            width: 415px;
+        }
+
+    }
+    & p{
+        font-family: "Outfit", sans-serif;
+        font-size: 20px;
+        line-height: 32px;
+        color: #444444;
+        font-weight: 300;
+        @include mix.breakpoint(desktop){
+            transform: translateY(-160%);
+        }
+    }
+    & div.our_location ul{
+        display: flex;
+        list-style: none;
+        padding: 0;
+        align-items: stretch;
+         @include mix.breakpoint(desktop){
+            transform: translateY(-315%);
+        }
+        & li:first-child{
+            background-color: #151515;
+            padding: 10px 20px;
+            & a{
+                color: white;
+                font-family:"Big Shoulders", sans-serif;
+                font-size: 18px;
+                letter-spacing: 3px;
+            }
+        }
+        & li:nth-child(2){
+            background-color: #D5966C;
+            padding: 10px 20px;
+            & a img{
+                height: 100%;
+                width: 8px;
+            }
+        }
+    }
+
+}
+header.home{
+    margin-bottom: 100px;
+    @include mix.breakpoint(tablet){
+        display: flex;
+        & div.imagen_header{
+            width: 55%;
+            height: auto;
+        }
+    @include mix.breakpoint(desktop){
+        max-width: 100%;
+        height: auto;
+
+        & div.imagen_header{
+            width: 70%;
+            height: auto;
+            background-color: #151515;
+        }
+    }
+    }
+    
+    
+}
+

@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+@use '../abstracts/mixins' as mix;
+footer.home{
+    background-color: #151515;
+    padding: 48px 32px;
+    @include mix.breakpoint(tablet){
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        padding: 56px 40px;
+        gap:15px;
+    }
+    & p{
+        font-family: "Outfit", sans-serif;
+        font-size: 16px;
+        line-height: 32px;
+        color: white;
+        font-weight: 200;
+        margin-top: 20px;
+        @include mix.breakpoint(tablet){
+            margin: 0;
+            width: 281px;
+        }
+    }
+    & div.iconos{
+        display: flex;
+        margin-top: 20px;
+        & img{
+        margin-right: 20px;
+        }
+    }
+}
+footer.our_location{
+    background-color: #D5966C;
+    padding: 48px 20px;
+    @include mix.breakpoint(tablet){
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        padding: 56px 40px;
+        gap:15px;
+    }
+    & p{
+        font-family: "Outfit", sans-serif;
+        font-size: 19px;
+        line-height: 26px;
+        font-weight: 200;
+        color:#151515;
+        @include mix.breakpoint(tablet){
+            width: 286px;
+            margin: 0;
+        }
+    }
+    & div.iconos{
+        display: flex;
+        @include mix.breakpoint(tablet){
+            width: 100px;
+            overflow: hidden;
+        }
+        & img{
+            margin-right: 20px;
+            @include mix.breakpoint(tablet){
+                width: 20px;
+                height: 20px;
+            }
+            }
+    }
+}

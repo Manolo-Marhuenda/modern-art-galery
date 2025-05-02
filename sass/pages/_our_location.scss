@@ -1,0 +1,68 @@
+@use '../abstracts/mixins' as mix;
+header.our_location div.back_to_home{
+    & ul{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        @include mix.breakpoint(tablet){
+            padding-left: 39px;
+            width: 264px;
+            height: 72px;
+        }
+
+        & li:nth-child(2){
+            background-color: #151515;
+            padding: 10px 20px;
+            & a{
+                color: white;
+                font-family:"Big Shoulders", sans-serif;
+                font-size: 18px;
+                letter-spacing: 3px;
+                @include mix.breakpoint(tablet){
+                    font-size: 20px;
+                }
+                }
+            }
+        & li:first-child{
+            background-color: #D5966C;
+            padding: 10px 20px;
+            transform: rotate(180deg);
+            display: flex;
+            justify-content: center;
+            & a{
+                display: block;
+                text-align: center;
+                }
+                & img{
+                    height: 100%;
+                    width: 8px;
+                }
+            }
+        }
+    }
+header.our_location{
+    padding: 0;
+    margin: 0;
+    min-height: 530px;
+    background-image: url(../../img/Maps.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    @include mix.breakpoint(tablet){
+        min-height: 530px;
+        background-image: url(../../img/Maps_tablet.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: 100%;
+
+    }
+    @include mix.breakpoint(tablethorizontal){
+        background-image: url(../../img/Maps_tablethorizontal.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+    }
+    }
